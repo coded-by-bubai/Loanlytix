@@ -11,13 +11,11 @@ The project aims to demonstrate how predictive analytics can support faster, mor
 ## Key Features
 
 - **Loan Approval Prediction:** Predicts the likely approval outcome based on applicant information.
-- **Applicant Profile Analysis:** Evaluates relevant financial and demographic features.
 - **Data Preprocessing:** Handles missing values, categorical variables, and feature preparation.
-- **Exploratory Data Analysis:** Identifies patterns, correlations, and trends in loan application data.
+- **Exploratory Data Analysis:** Identifies patterns, correlations in loan application data.
 - **Machine Learning Models:** Supports training and comparison of classification algorithms.
 - **Model Evaluation:** Measures model performance using appropriate classification metrics.
-- **Credit Risk Insights:** Provides a foundation for analyzing applicant risk indicators.
-- **Interactive Dashboard:** Can be extended with a web interface for submitting applicant details and viewing predictions.
+- **Interactive Dashboard:** It extended to a web interface for submitting applicant details and viewing predictions.
 
 ## Technology Stack
 
@@ -41,7 +39,7 @@ The project aims to demonstrate how predictive analytics can support faster, mor
 6. **Model Training:** Train classification models on historical application data.
 7. **Model Evaluation:** Compare model performance using multiple evaluation metrics.
 8. **Prediction:** Generate an estimated loan approval outcome for new applicant data.
-9. **Deployment:** Optionally integrate the trained model into an interactive application.
+9. **Deployment:** integrate the trained model into an interactive application.
 
 ## Project Structure
 
@@ -49,10 +47,11 @@ The project aims to demonstrate how predictive analytics can support faster, mor
 Loanlytix/
 ├── data/
 │   └── raw/
-│   └── processed/
 ├── notebooks/
 ├── models/
-│   └── loan_approval_model.pkl
+│   └── feature_columns.pkl
+│   └── loan_rf_model.pkl
+│   └── scaler.pkl
 ├── requirements.txt
 ├── .gitignore
 └── README.md
@@ -111,17 +110,13 @@ Loanlytix can evaluate trained models using the following metrics:
 | F1-score | Balances precision and recall |
 | ROC-AUC | Measures the model's ability to distinguish between outcome classes |
 
-Actual results should be reported after evaluating the model on an appropriate held-out test set.
-
 ## Future Enhancements
 
 - Integrate explainable AI using SHAP to interpret individual predictions.
-- Compare models such as Logistic Regression, Random Forest, and XGBoost.
-- Build an interactive dashboard for loan eligibility assessment.
+- Compare models such as lightgbm, catboost and XGBoost.
 - Add probability calibration and confidence-aware predictions.
 - Analyze fairness and potential bias across applicant groups.
 - Extend the project to predict loan default risk using an appropriate dataset.
-- Deploy the application through a cloud hosting platform.
 
 ## Responsible Use
 
